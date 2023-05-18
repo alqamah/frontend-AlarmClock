@@ -97,7 +97,7 @@ setInterval(checkAlarmActivation, 1000);
 function playAlarm(currentTime) {
   if (!isPlaying) {
     console.log('alarm activated', currentTime);
-    showNotificationAlert('Alarm Playing! The Time is:' + currentTime);
+    showNotificationAlert('Alarm Playing! The Time is: ' + currentTime);
     audio.play();
     return;
   }
