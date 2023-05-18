@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alarm Clock</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Quicksand:wght@300&display=swap"
+    rel="stylesheet">
+  <!--css file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="notification-box-alert"></div>
+  <div id="notification-box"></div>
+  <div id="main-container">
+    <div id="clock-container">
+      <div class="clock">
+        <div class="hours">
+          <div class="first">
+            <div class="number">0</div>
+          </div>
+          <div class="second">
+            <div class="number">0</div>
+          </div>
+        </div>
+        <div class="tick">:</div>
+        <div class="minutes">
+          <div class="first">
+            <div class="number">0</div>
+          </div>
+          <div class="second">
+            <div class="number">0</div>
+          </div>
+        </div>
+        <div class="tick">:</div>
+        <div class="seconds">
+          <div class="first">
+            <div class="number">0</div>
+          </div>
+          <div class="second infinite">
+            <div class="number">0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="date">
+      date
+    </div>
+  </div>
+  <div id="aside-container">
+    <section id="wrapper">
+      <div id="interface">
+        <div id="small-clock">
+          2<span id='clock-sep'> : </span>22
+        </div>
+        <form class="alarm-setting-form">
+          <hr>
+          <div class="set-alarm-div">
+            <input type="number" name="hour" placeholder="HH" max="23" min="00">
+            <input type="number" name="minute" placeholder="MM" max="59" min="00">
+            <!--
+              <input type="number" name="second" placeholder="SS" max="59" min="00">
+              Not using 'seconds parameter to prevent alarm miss and and reduce processing consumption'
+            -->
+          </div>
+          <div class="btn">
+            <button type="submit" class="set-alarm">Set Alarm</button>
+            <button type="reset" onclick="stopAlarm()" class="stop-alarm">Stop Alarm</button>
+          </div>
+          <hr>
+        </form>
+        <h3>Upcoming Alarms</h3>
+      </div>
+      <div id="Upcoming-Alarms">
+        <ul id="Alarms-List">
+          <!--list of all the upcoming alarms-->
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
